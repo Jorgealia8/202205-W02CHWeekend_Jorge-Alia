@@ -1,15 +1,9 @@
-// let rows = 5;
-// let columns = 5;
-
-// let array = new Array(rows);
-// let secondArray = new Array(columns);
-
 let array = [
   [0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [1, 1, 1, 0, 0],
+  [1, 1, 0, 0, 0],
+  [1, 1, 0, 0, 0],
+  [1, 1, 0, 0, 0],
 ];
 
 let secondArray = [
@@ -20,7 +14,7 @@ let secondArray = [
   [0, 0, 0, 0, 0],
 ];
 let countAlive = 0;
-function tourArray(array) {
+export function tourArray(array) {
   for (let j = 0; j < array.length; j++) {
     for (let i = 0; i < array.length; i++) {
       countAlive = 0;
@@ -39,7 +33,7 @@ function tourArray(array) {
         if (array[j - 1][i] === 1) {
           countAlive++;
         }
-        if (array[j - 1][i - 1] === 1) {
+        if (array[j - 1][i] === 1) {
           countAlive++;
         }
         if (array[j][i + 1] === 1) {
@@ -194,6 +188,7 @@ function tourArray(array) {
       }
     }
   }
+  return secondArray;
 }
 
 tourArray(array);
