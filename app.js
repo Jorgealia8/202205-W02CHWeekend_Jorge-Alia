@@ -1,24 +1,34 @@
 let array = [
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [1, 1, 0, 0, 0],
-  [1, 1, 0, 0, 0],
-  [1, 1, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  [1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+  [1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
 ];
 
 let secondArray = [
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ];
 let countAlive = 0;
 export function tourArray(array) {
   for (let j = 0; j < array.length; j++) {
     for (let i = 0; i < array.length; i++) {
       countAlive = 0;
-      //CUATRO ESQUINAS
+      //RECORRE CUATRO ESQUINAS
       if (i === 0 && j === 0) {
         if (array[j + 1][i] === 1) {
           countAlive++;
@@ -61,7 +71,7 @@ export function tourArray(array) {
         }
       }
 
-      //    CUATRO BORDES
+      // RECORRE CUATRO BORDES
       //BORDE IZQUIERDO
       else if (i === 0 && j !== 0 && j !== array[j].length - 1) {
         if (array[j - 1][i] === 1) {
@@ -143,6 +153,7 @@ export function tourArray(array) {
           countAlive++;
         }
       } else {
+        // RECORRE CENTRO DEL ARRAY
         if (array[j - 1][i - 1] === 1) {
           countAlive++;
         }
