@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "jest --watchAll --coverage",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sass": "sass scss:css -w --no-source-map"
   },
   "author": "",
   "license": "ISC",
@@ -22,7 +23,8 @@
     "eslint-plugin-jest": "^26.2.2",
     "eslint-plugin-n": "^15.2.0",
     "eslint-plugin-promise": "^6.0.0",
-    "jest": "^28.1.0"
+    "jest": "^28.1.0",
+    "sass": "^1.52.1"
   },
   "babel": {
     "env": {
